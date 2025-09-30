@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - Aprilia Racing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo-aprilia.png" alt="Logo Aprilia" width="150">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="modelli.html">Modelli</a></li>
+                    <li><a href="storia.html">Storia</a></li>
+                    <li><a href="contatti.html" class="active">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contattaci</h1>
+                <p>Siamo a tua disposizione per qualsiasi informazione</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <h2>Informazioni di Contatto</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Sede Principale</h3>
+                        <img src="sede-aprilia.jpg" alt="Sede Aprilia Noale" width="400">
+                        <p><strong>Aprilia Racing S.r.l.</strong></p>
+                        <p>Via Giovanni Agnelli, 3</p>
+                        <p>30033 Noale (VE)</p>
+                        <p>Italia</p>
+                        <p><strong>Tel:</strong> +39 041 5829111</p>
+                        <p><strong>Fax:</strong> +39 041 5829150</p>
+                        <p><strong>Email:</strong> <a href="mailto:info@aprilia.com">info@aprilia.com</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Assistenza Clienti</h3>
+                        <p>Il nostro team di assistenza è disponibile per rispondere a tutte le tue domande.</p>
+                        <ul>
+                            <li><strong>Orari:</strong> Lunedì - Venerdì: 9:00 - 18:00</li>
+                            <li><strong>Telefono:</strong> +39 041 5829200</li>
+                            <li><strong>Email:</strong> <a href="mailto:assistenza@aprilia.com">assistenza@aprilia.com</a></li>
+                            <li><strong>WhatsApp:</strong> +39 345 1234567</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Ufficio Stampa</h3>
+                        <p>Per richieste media e comunicati stampa.</p>
+                        <ul>
+                            <li><strong>Responsabile:</strong> Dott. Marco Rossi</li>
+                            <li><strong>Tel:</strong> +39 041 5829300</li>
+                            <li><strong>Email:</strong> <a href="mailto:press@aprilia.com">press@aprilia.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Reparto Vendite</h3>
+                        <p>Informazioni su acquisti e concessionari.</p>
+                        <ul>
+                            <li><strong>Tel:</strong> +39 041 5829400</li>
+                            <li><strong>Email:</strong> <a href="mailto:vendite@aprilia.com">vendite@aprilia.com</a></li>
+                            <li><strong>Cataloghi:</strong> Richiedi il catalogo gratuito</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Orari di Apertura</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Giorno</th>
+                            <th>Orario Mattina</th>
+                            <th>Orario Pomeriggio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunedì</td>
+                            <td>9:00 - 13:00</td>
+                            <td>14:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Martedì</td>
+                            <td>9:00 - 13:00</td>
+                            <td>14:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Mercoledì</td>
+                            <td>9:00 - 13:00</td>
+                            <td>14:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Giovedì</td>
+                            <td>9:00 - 13:00</td>
+                            <td>14:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Venerdì</td>
+                            <td>9:00 - 13:00</td>
+                            <td>14:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sabato</td>
+                            <td>9:00 - 12:00</td>
+                            <td>Chiuso</td>
+                        </tr>
+                        <tr>
+                            <td>Domenica</td>
+                            <td>Chiuso</td>
+                            <td>Chiuso</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <h2>Inviaci un Messaggio</h2>
+                <p>Compila il form sottostante e ti risponderemo al più presto</p>
+                
+                <form class="contact-form" action="invia.php" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cognome">Cognome *</label>
+                            <input type="text" id="cognome" name="cognome" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Telefono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivo">Motivo del Contatto *</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="">Seleziona un'opzione</option>
+                            <option value="informazioni">Informazioni Generali</option>
+                            <option value="acquisto">Acquisto Moto</option>
+                            <option value="assistenza">Assistenza Tecnica</option>
+                            <option value="test-ride">Prenotazione Test Ride</option>
+                            <option value="altro">Altro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messaggio">Messaggio *</label>
+                        <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="privacy" required>
+                            Accetto l'<a href="#">informativa sulla privacy</a> *
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="newsletter">
+                            Desidero ricevere newsletter e comunicazioni promozionali
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Invia Messaggio</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="dealers">
+            <div class="container">
+                <h2>Trova il Concessionario più Vicino</h2>
+                <p>I nostri concessionari autorizzati sono a tua disposizione in tutta Italia</p>
+
+                <h3>Principali Concessionari in Italia</h3>
+                <ol>
+                    <li><strong>Milano:</strong> Aprilia Store Milano - Via Mecenate 76 - Tel: 02 12345678</li>
+                    <li><strong>Roma:</strong> Motomarket Roma - Via Tiburtina 1234 - Tel: 06 12345678</li>
+                    <li><strong>Torino:</strong> Speed Motor Torino - Corso Francia 456 - Tel: 011 12345678</li>
+                    <li><strong>Napoli:</strong> Moto Sud Napoli - Via Toledo 789 - Tel: 081 12345678</li>
+                    <li><strong>Bologna:</strong> Racing Point Bologna - Via Stalingrado 234 - Tel: 051 12345678</li>
+                </ol>
+
+                <p>Per trovare tutti i concessionari autorizzati, visita la nostra 
+                <a href="https://www.aprilia.com/dealer-locator" target="_blank">pagina dealer locator</a>.</p>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Domande Frequenti (FAQ)</h2>
+
+                <h3>Come posso prenotare un test ride?</h3>
+                <p>Puoi prenotare un test ride compilando il form sopra selezionando "Prenotazione Test Ride" 
+                oppure contattando direttamente il concessionario più vicino.</p>
+
+                <h3>Quali garanzie offrite sulle moto nuove?</h3>
+                <p>Tutte le moto Aprilia nuove sono coperte da <strong>garanzia di 2 anni</strong> estendibile 
+                fino a 4 anni con il programma Aprilia Extended Warranty.</p>
+
+                <h3>Dove posso trovare ricambi originali?</h3>
+                <p>I ricambi originali Aprilia sono disponibili presso tutti i nostri concessionari autorizzati 
+                e possono essere ordinati online sul sito ufficiale.</p>
+
+                <h3>Organizzate eventi o track days?</h3>
+                <p>Sì! Organizziamo regolarmente <em>track days</em> e <em>corsi di guida sportiva</em>. 
+                Per maggiori informazioni, iscriviti alla newsletter o contatta il nostro ufficio eventi.</p>
+            </div>
+        </section>
+
+        <section class="social-section">
+            <div class="container">
+                <h2>Seguici sui Social Media</h2>
+                <p>Resta aggiornato su tutte le novità Aprilia</p>
+                <ul class="social-list">
+                    <li><strong>Facebook:</strong> <a href="https://facebook.com/aprilia" target="_blank">@ApriliaOfficial</a></li>
+                    <li><strong>Instagram:</strong> <a href="https://instagram.com/aprilia" target="_blank">@aprilia_official</a></li>
+                    <li><strong>Twitter:</strong> <a href="https://twitter.com/aprilia" target="_blank">@ApriliaOfficial</a></li>
+                    <li><strong>YouTube:</strong> <a href="https://youtube.com/aprilia" target="_blank">Aprilia Official Channel</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/company/aprilia" target="_blank">Aprilia Racing</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Aprilia Racing S.r.l.</h4>
+                    <p>Via Giovanni Agnelli, 3</p>
+                    <p>30033 Noale (VE), Italia</p>
+                    <p>Tel: +39 041 5829111</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Link Utili</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="modelli.html">Modelli</a></li>
+                        <li><a href="storia.html">Storia</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Seguici</h4>
+                    <p>Facebook | Instagram | Twitter</p>
+                    <p>YouTube | LinkedIn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aprilia Racing S.r.l. - Tutti i diritti riservati</p>
+                <p>P.IVA: 12345678901 | Privacy Policy | Cookie Policy</p>
+                <p>Data ultimo aggiornamento: 30 Settembre 2025</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
