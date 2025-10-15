@@ -83,7 +83,7 @@ nav .menu li a {
     position: relative; /* Posizione relativa (per posizionare ::after) */
 }
 
-nav .menu li a::after { /* Pseudo-elemento: aggiunge contenuto DOPO l'elemento */
+nav .menu li a::after { /* aggiunge contenuto DOPO l'elemento */
     content: ''; /* Contenuto vuoto (obbligatorio per ::after) */
     position: absolute; /* Posizione assoluta rispetto al parent posizionato */
     bottom: 0;
@@ -114,13 +114,13 @@ nav .menu li a.active {
     display: flex;
     align-items: center;
     justify-content: center; /* FLEXBOX: centra orizzontalmente */
-    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); /* Gradiente lineare: angolo, colore1 posizione, colore2 posizione */
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); 
     text-align: center; /* Allineamento testo centrato */
     padding: 120px 20px 60px;
-    overflow: hidden; /* Nasconde contenuto che esce dal box */
+    overflow: hidden; /* Nasconde contenuto che esce*/
 }
 
-.hero::before { /* Pseudo-elemento: aggiunge contenuto PRIMA dell'elemento */
+.hero::before { /* aggiunge contenuto PRIMA dell'elemento */
     content: '';
     background: repeating-linear-gradient( /* Gradiente ripetuto (effetto griglia) */
         90deg,
@@ -228,7 +228,7 @@ em { /* Tag em (enfasi) */
    LISTE
    ======================================== */
 
-ul, ol { /* Virgola = applica stili a entrambi selettori */
+ul, ol { /* applica stili a entrambi selettori */
     margin: 20px 0 20px 40px; /* Margine: sopra, dx, sotto, sx */
 }
 
@@ -926,4 +926,5 @@ textarea:focus-visible {
         animation: none;
     }
 }
+
 
