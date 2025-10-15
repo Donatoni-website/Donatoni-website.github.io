@@ -3,14 +3,14 @@
    ======================================== */
 
 /* Reset e Base */
-* { /* Selettore universale: seleziona TUTTI gli elementi */
-    margin: 0; /* Spazio ESTERNO: azzera margini esterni */
-    padding: 0; /* Spazio INTERNO: azzera spaziatura interna */
-    box-sizing: border-box; /* Calcola width/height includendo padding e border */
+* { 
+    margin: 0; /*azzera margini esterni */
+    padding: 0; /*azzera spaziatura interna */
+    box-sizing: border-box; /* cambia il modo in cui il browser calcola le dimensioni di un elemento. */
 }
 
-body { /* Selettore tag: seleziona il tag body */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Famiglia di caratteri (lista priorità) */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* caratteri (lista priorità) */
     line-height: 1.6; /* Altezza della riga (interlinea) */
     color: #ffffff; /* Colore del testo (bianco) */
     background-color: #0a0a0a; /* Colore di sfondo (nero scuro) */
@@ -18,17 +18,17 @@ body { /* Selettore tag: seleziona il tag body */
 
 img {
     max-width: 100%; /* Larghezza massima: 100% del contenitore */
-    height: auto; /* Altezza automatica (mantiene proporzioni) */
-    display: block; /* Elemento a blocco (occupa tutta la larghezza) */
+    height: auto; /* Altezza automatica */
+    display: block; /* Elemento(immagine) a blocco (occupa tutta la larghezza) */
 }
 
-a { /* Tutti i link */
+a { /* link */
     text-decoration: none; /* Rimuove sottolineatura dai link */
     color: #e30613; /* Colore rosso Aprilia */
-    transition: all 0.3s ease; /* Transizione fluida: proprietà, durata, timing */
+    transition: all 0.3s ease; /* Transizione fluida*/
 }
 
-a:hover { /* Pseudo-classe: stato quando il mouse è sopra il link */
+a:hover { /* stato quando il mouse è sopra il link */
     color: #ff4757;
 }
 
@@ -50,7 +50,7 @@ header {
     top: 0; /* Distanza da margine superiore: 0px */
     left: 0; /* Distanza da margine sinistro: 0px */
     right: 0; /* Distanza da margine destro: 0px */
-    z-index: 1000; /* Ordine sovrapposizione (più alto = sopra altri elementi) */
+    z-index: 1000; /* Ordine sovrapposizione (elemento più alto = sopra altri elementi) */
     border-bottom: 3px solid #e30613; /* Bordo inferiore: spessore, stile, colore */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Ombra box: offset-x, offset-y, blur, colore */
 }
@@ -66,14 +66,14 @@ header .container { /* Selettore discendente: .container DENTRO header */
     transition: transform 0.3s ease; /* Transizione sulla trasformazione */
 }
 
-.logo img:hover { /* Selettore multiplo: img dentro .logo al hover */
+.logo img:hover { /* mouse passa sopra un'immagine che si trova dentro un elemento con classe logo */
     transform: scale(1.05); /* Trasformazione: ingrandisce del 5% */
 }
 
 nav .menu {
     display: flex;
     list-style: none; /* Rimuove pallini/numeri dalle liste */
-    gap: 30px; /* FLEXBOX: spazio tra elementi flex (molto comodo!) */
+    gap: 30px; /* FLEXBOX: spazio tra elementi flex */
 }
 
 nav .menu li a {
@@ -926,3 +926,4 @@ textarea:focus-visible {
         animation: none;
     }
 }
+
