@@ -3,40 +3,40 @@
    ======================================== */
 
 /* Reset e Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { /* Selettore universale: seleziona TUTTI gli elementi */
+    margin: 0; /* Spazio ESTERNO: azzera margini esterni */
+    padding: 0; /* Spazio INTERNO: azzera spaziatura interna */
+    box-sizing: border-box; /* Calcola width/height includendo padding e border */
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #ffffff;
-    background-color: #0a0a0a;
+body { /* Selettore tag: seleziona il tag body */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Famiglia di caratteri (lista priorità) */
+    line-height: 1.6; /* Altezza della riga (interlinea) */
+    color: #ffffff; /* Colore del testo (bianco) */
+    background-color: #0a0a0a; /* Colore di sfondo (nero scuro) */
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    max-width: 100%; /* Larghezza massima: 100% del contenitore */
+    height: auto; /* Altezza automatica (mantiene proporzioni) */
+    display: block; /* Elemento a blocco (occupa tutta la larghezza) */
 }
 
-a {
-    text-decoration: none;
-    color: #e30613;
-    transition: all 0.3s ease;
+a { /* Tutti i link */
+    text-decoration: none; /* Rimuove sottolineatura dai link */
+    color: #e30613; /* Colore rosso Aprilia */
+    transition: all 0.3s ease; /* Transizione fluida: proprietà, durata, timing */
 }
 
-a:hover {
+a:hover { /* Pseudo-classe: stato quando il mouse è sopra il link */
     color: #ff4757;
 }
 
 /* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.container { /* Selettore classe: elementi con class="container" */
+    max-width: 1200px; /* Larghezza massima contenitore */
+    margin: 0 auto; /* Centra orizzontalmente: 0 sopra/sotto, auto sx/dx */
+    padding: 0 20px; /* Padding: 0 sopra/sotto, 20px sx/dx */
 }
 
 /* ========================================
@@ -44,63 +44,59 @@ a:hover {
    ======================================== */
 
 header {
-    background-color: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    border-bottom: 3px solid #e30613;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(10, 10, 10, 0.95); /* rgba = colore con trasparenza (rosso, verde, blu, alpha) */
+    backdrop-filter: blur(10px); /* Sfoca lo sfondo dietro l'elemento (effetto vetro) */
+    position: fixed; /* Posizione fissa rispetto alla finestra (rimane visibile scrollando) */
+    top: 0; /* Distanza da margine superiore: 0px */
+    left: 0; /* Distanza da margine sinistro: 0px */
+    right: 0; /* Distanza da margine destro: 0px */
+    z-index: 1000; /* Ordine sovrapposizione (più alto = sopra altri elementi) */
+    border-bottom: 3px solid #e30613; /* Bordo inferiore: spessore, stile, colore */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Ombra box: offset-x, offset-y, blur, colore */
 }
 
-header .container {
-    display: flex; /* FLEXBOX */
-    justify-content: space-between; /* FLEXBOX */
-    align-items: center; /* FLEXBOX */
+header .container { /* Selettore discendente: .container DENTRO header */
+    display: flex; /* FLEXBOX: attiva layout flessibile moderno */
+    justify-content: space-between; /* FLEXBOX: distribuzione orizzontale con spazio tra elementi */
+    align-items: center; /* FLEXBOX: allineamento verticale centrato */
     padding: 15px 20px;
 }
 
 .logo img {
-    display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Transizione sulla trasformazione */
 }
 
-.logo img:hover {
-    transform: scale(1.05);
+.logo img:hover { /* Selettore multiplo: img dentro .logo al hover */
+    transform: scale(1.05); /* Trasformazione: ingrandisce del 5% */
 }
 
 nav .menu {
-    display: flex; /* FLEXBOX */
-    list-style: none;
-    gap: 30px; /* FLEXBOX */
+    display: flex;
+    list-style: none; /* Rimuove pallini/numeri dalle liste */
+    gap: 30px; /* FLEXBOX: spazio tra elementi flex (molto comodo!) */
 }
 
 nav .menu li a {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 5px;
-    position: relative;
-    transition: all 0.3s ease;
+    font-weight: 600; /* Spessore carattere (100-900, 600=semi-grassetto) */
+    font-size: 16px; /* Dimensione testo in pixel */
+    border-radius: 5px; /* Angoli arrotondati */
+    position: relative; /* Posizione relativa (per posizionare ::after) */
 }
 
-nav .menu li a::after {
-    content: '';
-    position: absolute;
+nav .menu li a::after { /* Pseudo-elemento: aggiunge contenuto DOPO l'elemento */
+    content: ''; /* Contenuto vuoto (obbligatorio per ::after) */
+    position: absolute; /* Posizione assoluta rispetto al parent posizionato */
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
-    width: 0;
+    transform: translateX(-50%); /* Sposta orizzontalmente: -50% centra l'elemento */
+    width: 0; /* Larghezza iniziale 0 */
     height: 2px;
     background-color: #e30613;
     transition: width 0.3s ease;
 }
 
-nav .menu li a:hover::after,
-nav .menu li a.active::after {
+nav .menu li a:hover::after, /* Virgola = selettori multipli con stesse regole */
+nav .menu li a.active::after { /* Selettore classe su link: a con class="active" */
     width: 80%;
 }
 
@@ -114,80 +110,68 @@ nav .menu li a.active {
    ======================================== */
 
 .hero {
-    min-height: 100vh;
-    display: flex; /* FLEXBOX */
-    align-items: center; /* FLEXBOX */
-    justify-content: center; /* FLEXBOX */
-    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-    text-align: center;
+    min-height: 100vh; /* Altezza minima: 100vh = 100% altezza viewport (finestra) */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* FLEXBOX: centra orizzontalmente */
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); /* Gradiente lineare: angolo, colore1 posizione, colore2 posizione */
+    text-align: center; /* Allineamento testo centrato */
     padding: 120px 20px 60px;
-    position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Nasconde contenuto che esce dal box */
 }
 
-.hero::before {
+.hero::before { /* Pseudo-elemento: aggiunge contenuto PRIMA dell'elemento */
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: repeating-linear-gradient(
+    background: repeating-linear-gradient( /* Gradiente ripetuto (effetto griglia) */
         90deg,
         transparent,
         transparent 50px,
         rgba(227, 6, 19, 0.03) 50px,
         rgba(227, 6, 19, 0.03) 51px
     );
-    animation: slideGrid 20s linear infinite;
+    animation: slideGrid 20s linear infinite; /* Applica animazione: nome, durata, timing, ripetizioni */
 }
 
-@keyframes slideGrid {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(51px); }
+@keyframes slideGrid { /* Definisce un'animazione chiamata "slideGrid" */
+    0% { transform: translateX(0); } /* Inizio animazione: posizione 0 */
+    100% { transform: translateX(51px); } /* Fine animazione: spostato 51px */
 }
 
 .hero-content {
-    position: relative;
-    z-index: 10;
-    animation: fadeInUp 1s ease-out;
-    display: flex; /* FLEXBOX */
-    flex-direction: column; /* FLEXBOX */
-    align-items: center; /* FLEXBOX */
+    z-index: 10; /* Sopra il ::before */
+    animation: fadeInUp 1s ease-out; /* Animazione ingresso */
+    flex-direction: column; /* FLEXBOX: direzione verticale (impila elementi) */
 }
 
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 900;
+.hero h1 { /* Selettore discendente: h1 dentro .hero */
+    font-size: 4rem; /* rem = unità relativa alla dimensione font root (1rem = 16px default) */
+    font-weight: 900; /* Molto grassetto */
     margin-bottom: 20px;
     background: linear-gradient(135deg, #ffffff 0%, #e30613 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    -webkit-background-clip: text; /* Applica background solo al testo (WebKit/Chrome) */
+    -webkit-text-fill-color: transparent; /* Rende testo trasparente per vedere il gradiente */
+    background-clip: text; /* Versione standard */
+    text-transform: uppercase; /* Trasforma in MAIUSCOLO */
+    letter-spacing: 3px; /* Spaziatura tra lettere */
 }
 
 .hero p {
     font-size: 1.5rem;
-    color: #cccccc;
     margin-bottom: 30px;
 }
 
 .hero img {
-    margin: 40px auto;
-    border-radius: 15px;
-    box-shadow: 0 20px 60px rgba(227, 6, 19, 0.3);
+    margin: 40px auto; /* 40px sopra/sotto, auto sx/dx (centra) */
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+@keyframes fadeInUp { /* Animazione dissolvenza dal basso */
+    from { /* Stato iniziale */
+        opacity: 0; /* Opacità 0 (invisibile) */
+        transform: translateY(30px); /* Spostato 30px in basso */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    to { /* Stato finale */
+        opacity: 1; /* Opacità 1 (visibile) */
+        transform: translateY(0); /* Posizione normale */
     }
 }
 
@@ -197,22 +181,14 @@ nav .menu li a.active {
 
 .page-header {
     padding: 140px 20px 60px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-    text-align: center;
-    border-bottom: 3px solid #e30613;
 }
 
 .page-header h1 {
     font-size: 3.5rem;
-    color: #e30613;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .page-header p {
     font-size: 1.3rem;
-    color: #aaaaaa;
 }
 
 /* ========================================
@@ -225,49 +201,38 @@ section {
 
 h2 {
     font-size: 2.5rem;
-    color: #e30613;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 h3 {
     font-size: 1.8rem;
-    color: #ffffff;
-    margin: 30px 0 15px;
+    margin: 30px 0 15px; /* Margine: sopra, sx/dx, sotto */
 }
 
 h4 {
     font-size: 1.3rem;
-    color: #e30613;
-    margin-bottom: 10px;
 }
 
 p {
     margin-bottom: 15px;
-    color: #cccccc;
 }
 
 strong {
     color: #ffffff;
 }
 
-em {
-    color: #e30613;
-    font-style: normal;
+em { /* Tag em (enfasi) */
+    font-style: normal; /* Rimuove corsivo di default */
 }
 
 /* ========================================
    LISTE
    ======================================== */
 
-ul, ol {
-    margin: 20px 0 20px 40px;
-    color: #cccccc;
+ul, ol { /* Virgola = applica stili a entrambi selettori */
+    margin: 20px 0 20px 40px; /* Margine: sopra, dx, sotto, sx */
 }
 
 ul li, ol li {
-    margin-bottom: 12px;
     line-height: 1.8;
 }
 
@@ -277,39 +242,29 @@ ul li, ol li {
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Collassa bordi tabella (rimuove spazi doppi) */
     margin: 30px 0;
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-thead {
+thead { /* Intestazione tabella */
     background-color: #e30613;
 }
 
-thead th {
-    padding: 15px;
-    text-align: left;
+thead th { /* Celle intestazione */
+    text-align: left; /* Allineamento testo a sinistra */
     font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-tbody td {
-    padding: 15px;
-    border-bottom: 1px solid #333333;
-    color: #cccccc;
+tbody td { /* Celle dati corpo tabella */
+    border-bottom: 1px solid #333333; /* Bordo solo sotto */
 }
 
-tbody tr:hover {
+tbody tr:hover { /* Pseudo-classe: riga al passaggio mouse */
     background-color: #252525;
 }
 
-tbody tr:last-child td {
-    border-bottom: none;
+tbody tr:last-child td { /* Pseudo-classe: ultima riga */
+    border-bottom: none; /* Rimuove bordo inferiore ultima riga */
 }
 
 /* ========================================
@@ -322,7 +277,6 @@ tbody tr:last-child td {
 
 .intro p {
     font-size: 1.1rem;
-    line-height: 1.8;
 }
 
 /* ========================================
@@ -342,52 +296,39 @@ tbody tr:last-child td {
 }
 
 .news-grid {
-    display: flex; /* FLEXBOX */
-    flex-wrap: wrap; /* FLEXBOX */
-    gap: 30px; /* FLEXBOX */
+    flex-wrap: wrap; /* FLEXBOX: permette agli elementi di andare a capo se necessario */
     margin-top: 40px;
-    justify-content: space-around; /* FLEXBOX */
+    justify-content: space-around; /* FLEXBOX: distribuisce con spazio intorno */
 }
 
 .news-card {
-    flex: 1 1 300px; /* FLEXBOX - cresce, si restringe, base 300px */
-    max-width: 350px; /* FLEXBOX */
-    background-color: #1a1a1a;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    flex: 1 1 300px; /* FLEXBOX shorthand: grow(può crescere), shrink(può restringersi), basis(dimensione base) */
+    max-width: 350px;
     border: 1px solid #333333;
-    display: flex; /* FLEXBOX */
-    flex-direction: column; /* FLEXBOX */
 }
 
 .news-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(227, 6, 19, 0.4);
+    transform: translateY(-10px); /* Sposta verticalmente in alto */
     border-color: #e30613;
 }
 
 .news-card img {
-    width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* Immagine copre area senza deformarsi (taglia se necessario) */
 }
 
 .news-card h3 {
     padding: 20px 20px 10px;
-    font-size: 1.5rem;
 }
 
 .news-card p {
     padding: 0 20px 15px;
-    color: #aaaaaa;
-    flex-grow: 1; /* FLEXBOX - per far crescere il paragrafo */
+    flex-grow: 1; /* FLEXBOX: elemento cresce per occupare spazio disponibile */
 }
 
 .news-card a {
-    display: inline-block;
+    display: inline-block; /* Elemento in linea ma con dimensioni personalizzabili */
     padding: 0 20px 20px;
-    font-weight: 600;
 }
 
 /* ========================================
@@ -397,7 +338,6 @@ tbody tr:last-child td {
 .model-detail {
     margin-bottom: 60px;
     padding-bottom: 40px;
-    border-bottom: 2px solid #333333;
 }
 
 .model-detail:last-child {
@@ -406,16 +346,10 @@ tbody tr:last-child td {
 
 .model-detail img {
     margin: 30px 0;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .comparison {
-    background-color: #1a1a1a;
-    padding: 40px;
-    border-radius: 15px;
     margin-top: 40px;
-    border: 2px solid #e30613;
 }
 
 /* ========================================
@@ -425,7 +359,6 @@ tbody tr:last-child td {
 .history article {
     margin-bottom: 60px;
     padding-bottom: 40px;
-    border-bottom: 2px solid #333333;
 }
 
 .history article:last-child {
@@ -434,62 +367,39 @@ tbody tr:last-child td {
 
 .history img {
     margin: 30px 0;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(227, 6, 19, 0.3);
 }
 
 .achievements {
-    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-    padding: 40px;
-    border-radius: 15px;
     border: 2px solid #e30613;
 }
 
 .stats-grid {
-    display: flex; /* FLEXBOX */
-    flex-wrap: wrap; /* FLEXBOX */
-    gap: 30px; /* FLEXBOX */
     margin-top: 30px;
-    justify-content: center; /* FLEXBOX */
 }
 
 .stat-box {
-    flex: 1 1 200px; /* FLEXBOX */
-    max-width: 250px; /* FLEXBOX */
+    flex: 1 1 200px;
+    max-width: 250px;
     text-align: center;
-    padding: 30px;
-    background-color: #0a0a0a;
-    border-radius: 10px;
     border: 1px solid #333333;
-    transition: all 0.3s ease;
-    display: flex; /* FLEXBOX */
-    flex-direction: column; /* FLEXBOX */
-    align-items: center; /* FLEXBOX */
-    justify-content: center; /* FLEXBOX */
 }
 
 .stat-box:hover {
     border-color: #e30613;
-    transform: scale(1.05);
+    transform: scale(1.05); /* Ingrandisce del 5% */
 }
 
 .stat-box h3 {
     font-size: 3rem;
-    color: #e30613;
-    margin-bottom: 10px;
 }
 
 .stat-box p {
-    color: #ffffff;
     font-size: 1.1rem;
 }
 
 .timeline-link {
     margin-top: 40px;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-left: 4px solid #e30613;
-    border-radius: 5px;
+    border-left: 4px solid #e30613; /* Bordo solo a sinistra */
 }
 
 /* ========================================
@@ -501,43 +411,28 @@ tbody tr:last-child td {
 }
 
 .contact-grid {
-    display: flex; /* FLEXBOX */
-    flex-wrap: wrap; /* FLEXBOX */
-    gap: 30px; /* FLEXBOX */
     margin: 40px 0;
-    justify-content: space-between; /* FLEXBOX */
+    justify-content: space-between; /* FLEXBOX: distribuisce con spazio tra elementi */
 }
 
 .contact-card {
-    flex: 1 1 280px; /* FLEXBOX */
-    background-color: #1a1a1a;
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid #333333;
-    transition: all 0.3s ease;
-    display: flex; /* FLEXBOX */
-    flex-direction: column; /* FLEXBOX */
+    flex: 1 1 280px;
 }
 
 .contact-card:hover {
     border-color: #e30613;
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(227, 6, 19, 0.3);
 }
 
 .contact-card h3 {
-    color: #e30613;
     margin-bottom: 20px;
-    font-size: 1.5rem;
 }
 
 .contact-card img {
     margin: 20px 0;
-    border-radius: 10px;
 }
 
 .contact-card ul {
-    list-style: none;
     margin: 15px 0;
 }
 
@@ -555,58 +450,40 @@ tbody tr:last-child td {
 }
 
 .contact-form {
-    max-width: 800px;
-    margin: 40px auto 0;
-    background-color: #1a1a1a;
-    padding: 40px;
-    border-radius: 15px;
-    border: 1px solid #333333;
+    margin: 40px auto 0; /* 40px sopra, auto sx/dx (centra), 0 sotto */
 }
 
 .form-row {
-    display: flex; /* FLEXBOX */
-    gap: 20px; /* FLEXBOX */
+    gap: 20px;
 }
 
 .form-group {
     margin-bottom: 25px;
-    flex: 1; /* FLEXBOX - per distribuire equamente lo spazio */
+    flex: 1; /* FLEXBOX: distribui equamente lo spazio disponibile */
 }
 
 .form-group label {
-    display: block;
     margin-bottom: 8px;
-    color: #ffffff;
-    font-weight: 600;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: #0d0d0d;
-    border: 2px solid #333333;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: inherit;
-    transition: all 0.3s ease;
+    font-family: inherit; /* Eredita font-family dal parent */
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    outline: none;
+    outline: none; /* Rimuove contorno di default */
     border-color: #e30613;
-    background-color: #1a1a1a;
 }
 
 .form-group textarea {
-    resize: vertical;
+    resize: vertical; /* Textarea ridimensionabile solo verticalmente */
 }
 
-.form-group input[type="checkbox"] {
+.form-group input[type="checkbox"] { /* Selettore attributo: input di tipo checkbox */
     width: auto;
     margin-right: 8px;
 }
@@ -616,29 +493,15 @@ tbody tr:last-child td {
    ======================================== */
 
 .btn-primary {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: #e30613;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    cursor: pointer; /* Cambia cursore in manina */
     box-shadow: 0 5px 20px rgba(227, 6, 19, 0.3);
 }
 
 .btn-primary:hover {
-    background-color: #ffffff;
-    color: #e30613;
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(227, 6, 19, 0.5);
 }
 
-button.btn-primary {
+button.btn-primary { /* Selettore tag + classe: button con classe btn-primary */
     width: 100%;
     margin-top: 10px;
 }
@@ -648,35 +511,24 @@ button.btn-primary {
    ======================================== */
 
 .cta {
-    background: linear-gradient(135deg, #e30613 0%, #a00410 100%);
-    text-align: center;
     padding: 80px 20px;
-    display: flex; /* FLEXBOX */
-    flex-direction: column; /* FLEXBOX */
-    align-items: center; /* FLEXBOX */
-    justify-content: center; /* FLEXBOX */
+    flex-direction: column; /* FLEXBOX: direzione verticale */
 }
 
 .cta h2 {
-    color: #ffffff;
     font-size: 2.5rem;
-    margin-bottom: 20px;
 }
 
 .cta p {
-    color: #ffffff;
     font-size: 1.2rem;
-    margin-bottom: 30px;
 }
 
 .cta .btn-primary {
     background-color: #ffffff;
-    color: #e30613;
 }
 
 .cta .btn-primary:hover {
     background-color: #0a0a0a;
-    color: #ffffff;
 }
 
 /* ========================================
@@ -688,10 +540,7 @@ button.btn-primary {
 }
 
 .dealers ol {
-    background-color: #1a1a1a;
     padding: 30px 30px 30px 60px;
-    border-radius: 10px;
-    border-left: 4px solid #e30613;
 }
 
 /* ========================================
@@ -703,8 +552,6 @@ button.btn-primary {
 }
 
 .faq h3 {
-    color: #e30613;
-    font-size: 1.5rem;
     margin-top: 30px;
     margin-bottom: 10px;
 }
@@ -712,7 +559,6 @@ button.btn-primary {
 .faq p {
     margin-bottom: 25px;
     padding-left: 20px;
-    border-left: 3px solid #333333;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -722,32 +568,22 @@ button.btn-primary {
    ======================================== */
 
 .social-section {
-    background-color: #0d0d0d;
     text-align: center;
 }
 
 .social-list {
-    list-style: none;
     margin: 30px 0;
-    display: flex; /* FLEXBOX */
-    flex-direction: column; /* FLEXBOX */
-    align-items: center; /* FLEXBOX */
-    gap: 15px; /* FLEXBOX */
+    flex-direction: column; /* FLEXBOX: direzione verticale */
+    gap: 15px;
 }
 
 .social-list li {
     font-size: 1.1rem;
-    padding: 15px 30px;
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    width: 100%;
     max-width: 500px;
-    transition: all 0.3s ease;
 }
 
 .social-list li:hover {
-    background-color: #e30613;
-    transform: translateX(10px);
+    transform: translateX(10px); /* Sposta orizzontalmente a destra */
 }
 
 /* ========================================
@@ -755,39 +591,29 @@ button.btn-primary {
    ======================================== */
 
 footer {
-    background-color: #0a0a0a;
     border-top: 3px solid #e30613;
     padding: 60px 20px 30px;
 }
 
 .footer-content {
-    display: flex; /* FLEXBOX */
-    flex-wrap: wrap; /* FLEXBOX */
-    gap: 40px; /* FLEXBOX */
+    flex-wrap: wrap; /* FLEXBOX: permette elementi di andare a capo */
     margin-bottom: 40px;
-    justify-content: space-between; /* FLEXBOX */
 }
 
 .footer-section {
-    flex: 1 1 250px; /* FLEXBOX */
+    flex: 1 1 250px;
 }
 
 .footer-section h4 {
-    color: #e30613;
-    font-size: 1.3rem;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .footer-section p {
-    color: #aaaaaa;
     margin-bottom: 8px;
     font-size: 0.95rem;
 }
 
 .footer-section ul {
-    list-style: none;
     margin: 0;
 }
 
@@ -797,24 +623,18 @@ footer {
 
 .footer-section ul li a {
     color: #aaaaaa;
-    transition: all 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #e30613;
     padding-left: 5px;
 }
 
 .footer-bottom {
-    text-align: center;
     padding-top: 30px;
-    border-top: 1px solid #333333;
 }
 
 .footer-bottom p {
-    color: #777777;
     font-size: 0.9rem;
-    margin-bottom: 8px;
 }
 
 /* ========================================
@@ -822,7 +642,7 @@ footer {
    ======================================== */
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Media query: applica stili se larghezza schermo ≤ 768px */
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -853,20 +673,20 @@ footer {
     }
     
     .form-row {
-        flex-direction: column; /* FLEXBOX - stack verticale su tablet */
+        flex-direction: column; /* FLEXBOX: stack verticale su tablet */
     }
     
     .footer-content {
-        flex-direction: column; /* FLEXBOX */
+        flex-direction: column;
         gap: 30px;
     }
     
     .news-grid {
-        justify-content: center; /* FLEXBOX */
+        justify-content: center;
     }
     
     .contact-grid {
-        justify-content: center; /* FLEXBOX */
+        justify-content: center;
     }
     
     table {
@@ -880,7 +700,7 @@ footer {
 }
 
 /* Mobile */
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* Media query per mobile: larghezza ≤ 480px */
     .hero {
         padding: 100px 15px 40px;
     }
@@ -910,13 +730,13 @@ footer {
     }
     
     nav .menu {
-        flex-direction: column; /* FLEXBOX */
+        flex-direction: column; /* FLEXBOX: menu verticale su mobile */
         gap: 10px;
-        align-items: center; /* FLEXBOX */
+        align-items: center;
     }
     
     header .container {
-        flex-direction: column; /* FLEXBOX */
+        flex-direction: column;
         gap: 15px;
     }
     
@@ -927,8 +747,8 @@ footer {
     .news-grid,
     .contact-grid,
     .stats-grid {
-        flex-direction: column; /* FLEXBOX */
-        align-items: center; /* FLEXBOX */
+        flex-direction: column;
+        align-items: center;
     }
     
     .contact-form {
@@ -983,7 +803,7 @@ footer {
    ANIMAZIONI AGGIUNTIVE
    ======================================== */
 
-@keyframes pulse {
+@keyframes pulse { /* Animazione pulsazione */
     0%, 100% {
         transform: scale(1);
     }
@@ -998,30 +818,30 @@ footer {
 
 /* Smooth Scrolling */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Scroll fluido quando si clicca su link interni */
 }
 
 /* Selection Color */
-::selection {
+::selection { /* Pseudo-elemento: stile del testo selezionato */
     background-color: #e30613;
     color: #ffffff;
 }
 
-::-moz-selection {
+::-moz-selection { /* Versione Firefox di ::selection */
     background-color: #e30613;
     color: #ffffff;
 }
 
 /* Scrollbar Styling */
-::-webkit-scrollbar {
+::-webkit-scrollbar { /* Personalizza scrollbar (Chrome/Safari) */
     width: 12px;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track { /* Traccia scrollbar */
     background: #0a0a0a;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb { /* Maniglia scrollbar */
     background: #e30613;
     border-radius: 6px;
 }
@@ -1034,18 +854,18 @@ html {
    PRINT STYLES
    ======================================== */
 
-@media print {
+@media print { /* Media query per stampa */
     header {
-        position: static;
+        position: static; /* Rimuove position fixed per stampa */
     }
     
     .hero::before {
-        animation: none;
+        animation: none; /* Disabilita animazioni per stampa */
     }
     
     .btn-primary,
     .cta {
-        display: none;
+        display: none; /* Nasconde elementi non necessari alla stampa */
     }
     
     body {
@@ -1067,17 +887,17 @@ html {
    ======================================== */
 
 /* Focus Visible per Tastiera */
-a:focus-visible,
+a:focus-visible, /* Pseudo-classe: focus visibile (tastiera, non mouse) */
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid #e30613;
-    outline-offset: 2px;
+    outline: 3px solid #e30613; /* Contorno per accessibilità */
+    outline-offset: 2px; /* Distanza tra elemento e contorno */
 }
 
 /* Skip to Main Content */
-.skip-link {
+.skip-link { /* Classe per link nascosto accessibilità */
     position: absolute;
     top: -40px;
     left: 0;
@@ -1093,12 +913,12 @@ textarea:focus-visible {
 }
 
 /* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) { /* Media query accessibilità: riduce animazioni */
     *,
-    *::before,
+    *::before, /* Tutti gli elementi e pseudo-elementi */
     *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
+        animation-duration: 0.01ms !important; /* !important = forza priorità regola CSS */
+        animation-iteration-count: 1 !important; /* Animazione eseguita solo 1 volta */
         transition-duration: 0.01ms !important;
     }
     
