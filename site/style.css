@@ -3,7 +3,7 @@
    ======================================== */
 
 /* Reset e Base */
-* { /* Selettore universale: seleziona TUTTI gli elementi */
+* { 
     margin: 0; /* Spazio ESTERNO: azzera margini esterni */
     padding: 0; /* Spazio INTERNO: azzera spaziatura interna */
     box-sizing: border-box; /* Calcola width/height includendo padding e border */
@@ -1106,3 +1106,4 @@ textarea:focus-visible {
         animation: none;
     }
 }
+
