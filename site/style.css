@@ -4,13 +4,13 @@
 
 /* Reset e Base */
 * { 
-    margin: 0; /* Spazio ESTERNO: azzera margini esterni */
-    padding: 0; /* Spazio INTERNO: azzera spaziatura interna */
-    box-sizing: border-box; /* Calcola width/height includendo padding e border */
+    margin: 0; /* azzera margini esterni */
+    padding: 0; /* azzera spaziatura interna */
+    box-sizing: border-box;
 }
 
-body { /* Selettore tag: seleziona il tag body */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Famiglia di caratteri (lista priorità) */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* caratteri (lista priorità) */
     line-height: 1.6; /* Altezza della riga (interlinea) */
     color: #ffffff; /* Colore del testo (bianco) */
     background-color: #0a0a0a; /* Colore di sfondo (nero scuro) */
@@ -1106,4 +1106,5 @@ textarea:focus-visible {
         animation: none;
     }
 }
+
 
