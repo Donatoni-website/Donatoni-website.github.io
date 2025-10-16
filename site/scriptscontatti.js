@@ -1,6 +1,6 @@
 <script>
         function handleSubmit(event) {
-            // Impedisce l'invio reale del form (che causerebbe l'errore 404)
+            // Impedisce l'invio del form (causerebbe l'errore 405)
             event.preventDefault();
             
             // Ottiene i valori del form
@@ -11,7 +11,7 @@
             const successMessage = document.getElementById('successMessage');
             successMessage.classList.add('show');
             
-            // Resetta il form (svuota i campi)
+            // Resetta il form 
             document.getElementById('contactForm').reset();
             
             // Nasconde il messaggio dopo 5 secondi
@@ -22,7 +22,7 @@
             // Scroll al messaggio di conferma
             successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             
-            // Ritorna false per assicurarsi che il form non venga inviato
+            // assicurarsi che il form non venga inviato
             return false;
         }
     </script>
