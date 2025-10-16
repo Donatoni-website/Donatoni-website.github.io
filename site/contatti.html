@@ -148,7 +148,7 @@
                 <h2>Inviaci un Messaggio</h2>
                 <p>Compila il form sottostante e ti risponderemo al più presto</p>
                 
-                <form class="contact-form" method="post">
+                <form class="contact-form" onsubmit="return handleSubmit(event)" id="contactForm">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nome">Nome *</label>
@@ -297,6 +297,7 @@
 </body>
 
 </html>
+
 
 
 
