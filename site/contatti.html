@@ -6,6 +6,34 @@
     <title>Contatti - Aprilia Racing</title>
     <link rel="icon" type="image/png" href="image/Immagine-ICONA.png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+            animation: slideDown 0.5s ease-out;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -269,6 +297,7 @@
 </body>
 
 </html>
+
 
 
 
