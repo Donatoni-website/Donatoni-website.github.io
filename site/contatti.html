@@ -296,10 +296,10 @@
     </footer>
       <script>
         function handleSubmit(event) {
-            // Impedisce l'invio reale del form (che causerebbe l'errore 404)
+            // Impedisce l'invio del form (che causerebbe l'errore 405)
             event.preventDefault();
             
-            // Ottiene i valori del form
+            // prende i valori del form
             const nome = document.getElementById('nome').value;
             const cognome = document.getElementById('cognome').value;
             
@@ -310,21 +310,22 @@
             // Resetta il form (svuota i campi)
             document.getElementById('contactForm').reset();
             
-            // Nasconde il messaggio dopo 5 secondi
+            // Nasconde il messaggio dopo 5 secondi(5000ms)
             setTimeout(function() {
                 successMessage.classList.remove('show');
             }, 5000);
             
-            // Scroll al messaggio di conferma
+            // ti manda al messaggio di conferma
             successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             
-            // Ritorna false per assicurarsi che il form non venga inviato
+            // Ritorna false per assicurarsi che il form non venga realmente inviato(causerebbe anche qui l'errore 405 se venisse inviato realmente)
             return false;
         }
     </script>
 </body>
 
 </html>
+
 
 
 
