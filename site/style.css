@@ -258,7 +258,7 @@ tbody tr:hover {
     padding: 0 20px 20px;
     color: #aaaaaa;
 }
-
+/*questa è la riga che vedi che separa un contenuto dall'altro */
 .model-detail {
     margin-bottom: 60px;
     padding-bottom: 40px;
@@ -342,7 +342,7 @@ tbody tr:hover {
     background-color: #0d0d0d;
 }
 
-/* Flex: card contatti in riga */
+/* qua l'uso di flex è usato per far in modo che la scritta contatti viene messa in riga con le altre scritte */
 .contact-grid {
     display: flex;
     flex-wrap: wrap;
@@ -465,7 +465,7 @@ button.btn-primary {
     margin-top: 10px;
 }
 
-/* Flex: centra CTA */
+/* Flex: centra cta che sarebbe la parte nella home in basso con su scritto contattici ora */
 .cta {
     background-color: #e30613;
     text-align: center;
@@ -734,4 +734,5 @@ footer {
         padding: 12px 20px;
     }
 }
+
 
