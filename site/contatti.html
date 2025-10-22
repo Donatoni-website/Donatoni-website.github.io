@@ -6,34 +6,6 @@
     <title>Contatti - Aprilia Racing</title>
     <link rel="icon" type="image/png" href="image/Immagine-ICONA.png">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .success-message {
-            display: none;
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 1.1rem;
-            animation: slideDown 0.5s ease-out;
-        }
-        
-        .success-message.show {
-            display: block;
-        }
-        
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -93,6 +65,7 @@
                         </ul>
                     </div>
                 </div>
+                
                 <h2>Orari di Apertura</h2>
                 <table>
                     <thead>
@@ -148,7 +121,7 @@
                 <h2>Inviaci un Messaggio</h2>
                 <p>Compila il form sottostante e ti risponderemo al più presto</p>
                 
-                <form class="contact-form" onsubmit="return handleSubmit(event)" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xgvnjnwj" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nome">Nome *</label>
@@ -204,9 +177,6 @@
 
                     <button type="submit" class="btn-primary">Invia Messaggio</button>
                 </form>
-                <div class="success-message" id="successMessage">
-                    ✓ Messaggio inviato con successo! Ti risponderemo al più presto.
-                </div>
             </div>
         </section>
 
@@ -294,43 +264,5 @@
             </div>
         </div>
     </footer>
-      <script>
-        function handleSubmit(event) {
-            // Impedisce l'invio del form (che causerebbe l'errore 405)
-            event.preventDefault();
-            
-            // prende i valori del form
-            const nome = document.getElementById('nome').value;
-            const cognome = document.getElementById('cognome').value;
-            
-            // Mostra il messaggio di conferma
-            const successMessage = document.getElementById('successMessage');
-            successMessage.classList.add('show');
-            
-            // Resetta il form (svuota i campi)
-            document.getElementById('contactForm').reset();
-            
-            // Nasconde il messaggio dopo 5 secondi(5000ms)
-            setTimeout(function() {
-                successMessage.classList.remove('show');
-            }, 5000);
-            
-            // ti manda al messaggio di conferma
-            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            // Ritorna false per assicurarsi che il form non venga realmente inviato(causerebbe anche qui l'errore 405 se venisse inviato realmente)
-            return false;
-        }
-    </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
