@@ -41,7 +41,7 @@ header {
     border-bottom: 3px solid #e30613;
 }
 
-/* Flex: logo e menu affiancati */
+/* logo e menu sulla stessa riga */
 header .container {
     display: flex;
     justify-content: space-between;
@@ -74,7 +74,7 @@ nav .menu li a.active {
     background-color: #1a1a1a;
 }
 
-/* Flex: centra contenuto hero */
+/* qua flex centra contenuto presente nel container hero */
 .hero {
     min-height: 100vh;
     background-color: #1a1a1a;
@@ -734,3 +734,4 @@ footer {
         padding: 12px 20px;
     }
 }
+
